@@ -1,22 +1,19 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import CustomButton from "./src/components/customButton";
-import MapView from "react-native-maps";
+import React from "react";
+import { Text, View } from "react-native";
+import HomeScreen from "./src/screens/HomeScreen/index";
 
-export default function App() {
+const app = () => {
   return (
-    <View style={styles.container}>
-      <Text>hello world</Text>
-      <StatusBar style="auto" />
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <HomeScreen />
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+export default app;
